@@ -3,7 +3,7 @@
  * Copyright(c) All Rights Reserved
  */
 
-package com.zhangchendong.designMode.buliderPattern;
+package main.java.com.zhangchendong.buliderPattern;
 
 /**
  * 建造者链式模式
