@@ -22,6 +22,7 @@ public class CourseChainBuilder {
     public CourseChainBuilder addPPT(String ppt){
         course.setPpt(ppt);
         return this;
+
     }
 
     public CourseChainBuilder addVideo(String video){
