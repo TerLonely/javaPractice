@@ -1,6 +1,7 @@
 package com.zcd.sort;
 
 /**
+ * algorithm
  * @Author 张琛栋 QQ：847890638
  * @ClassName DirectInsertSort
  * @Date 2021/3/19 3:53 PM
