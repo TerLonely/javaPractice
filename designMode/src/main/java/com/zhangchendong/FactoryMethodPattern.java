@@ -28,7 +28,6 @@ public class FactoryMethodPattern {
         }
     }
 
-
     /**
      *  创建一个抽象工厂类 ShapeFactory
      */
@@ -49,7 +48,6 @@ public class FactoryMethodPattern {
             return new RectAngle();
         }
     }
-
     /**
      * 工厂测试方法
      */
@@ -62,6 +60,4 @@ public class FactoryMethodPattern {
         Shape rectShape = rectAngleFactory.createShape();
         rectShape.draw();
     }
-
-
 }
