@@ -3,7 +3,7 @@
  * Copyright(c) All Rights Reserved
  */
 
-package com.zhangchendong.proxy.normal;
+package com.zhangchendong;
 
 /**
  *
