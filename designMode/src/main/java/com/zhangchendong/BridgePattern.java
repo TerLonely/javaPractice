@@ -6,10 +6,10 @@ package com.zhangchendong;
  * @author zhangchendong
  * @data 2024/7/22 下午5:17
  */
-public class BridgePattern {
+ class BridgePattern {
     public static void main(String[] args) {
-        Color redColor = new RedColor();
-        Color blueColor = new BlueColor();
+        ColorBigBridge redColor = new RedColor();
+        ColorBigBridge blueColor = new BlueColor();
 
         B_Shape redCircle = new Circle(redColor);
         B_Shape blueSquare = new Square(blueColor);
@@ -22,18 +22,18 @@ public class BridgePattern {
 /**
  * 现实部分 -- 颜色接口
  */
-interface Color{
+interface ColorBigBridge{
     void applyColor();
 }
 
-class RedColor implements Color{
+class RedColor implements ColorBigBridge{
     @Override
     public void applyColor() {
         System.out.println("Applying red color");
     }
 }
 
-class BlueColor implements Color{
+class BlueColor implements ColorBigBridge{
     @Override
     public void applyColor() {
         System.out.println("Applying blue color");
@@ -44,16 +44,16 @@ class BlueColor implements Color{
  * 抽象部分 -- 形状类
  */
 abstract class B_Shape{
-    protected Color color;
+    protected ColorBigBridge color;
 
-    public B_Shape(Color color){
+    public B_Shape(ColorBigBridge color){
         this.color = color;
     }
     abstract void draw();
 }
 //图形-圆
 class Circle extends B_Shape{
-    public Circle(Color color){
+    public Circle(ColorBigBridge color){
         super(color);
     }
     @Override
@@ -64,7 +64,7 @@ class Circle extends B_Shape{
 }
 //图形 - 方形
 class Square extends B_Shape{
-    public Square (Color color){
+    public Square (ColorBigBridge color){
         super(color);
     }
     @Override
