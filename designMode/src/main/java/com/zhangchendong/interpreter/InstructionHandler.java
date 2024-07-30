@@ -22,7 +22,8 @@ public class InstructionHandler {
         Stack stack = new Stack();
         //以空格分隔指令字符串
         String[] words = instruction.split(" ");
-
+        // "up move 5 and down run 10 and left move 5"
+        // 判断是否有and 若有and 栈中取出字符串 赋值在left中，并将后三个字段合并到right中
         for(int i = 0; i < words.length; i++){
             if(words[i].equalsIgnoreCase("and")){
                 left = (AbstractNode) stack.pop();
